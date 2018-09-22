@@ -15,7 +15,8 @@ int  main(int argc, char* argv[]) {
 	Eigen::VectorXd F(N), ans(N);
 	A = MatrixAssemblor();
 	F = VectorAssemblor();
-	ans = A.ldlt().solve(F);
+	//ans = A.ldlt().solve(F);
+	ans = A.lu().solve(F);
 	//std::cout << ans << std::endl;
 	double end = clock();
 	std::cout << end - start << std::endl;
