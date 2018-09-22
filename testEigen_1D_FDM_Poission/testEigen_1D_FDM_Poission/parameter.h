@@ -6,6 +6,6 @@ const double left = 0;
 const double right = 1;
 const double alpha = 0;
 const double beta = 1;
-const int N = 512;
+const int N = 10240;
 	
 #endif // !PARAMETER_H

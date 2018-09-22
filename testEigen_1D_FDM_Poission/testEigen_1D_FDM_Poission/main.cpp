@@ -10,14 +10,14 @@ Eigen::VectorXd VectorAssemblor();
 
 int  main(int argc, char* argv[]) {
 	char a;
+	double start = clock();
 	Eigen::MatrixXd A(N, N);
 	Eigen::VectorXd F(N), ans(N);
 	A = MatrixAssemblor();
 	F = VectorAssemblor();
-	double start = clock();
 	ans = A.ldlt().solve(F);
+	//std::cout << ans << std::endl;
 	double end = clock();
-	std::cout << ans << std::endl;
 	std::cout << end - start << std::endl;
 	std::cin >> a;
 }
